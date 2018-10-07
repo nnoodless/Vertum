@@ -1,5 +1,4 @@
 #include <chrono>
-#include <ctime>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -19,14 +18,11 @@
 #include "./RSA/rsa.h"
 
 int main() {
-  Keypair keypair;
-
-  const char *message = "well hello there!";
-  int *encrypted = keypair.encrypt(message);
-  std::string decrypted = keypair.decrypt(encrypted);
-
-  std::cout << "Encrypted (" << message << "): " << encrypted[0] << std::endl;
-   std::cout << "Decrypted: " << decrypted << std::endl;
+  Blockchain blockchain;
+  blockchain.createGenesisBlock();
 
   return 0;
 }
+
+// gcc compile
+// g++ vertum.cpp -lcrypto
