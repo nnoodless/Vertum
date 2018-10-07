@@ -17,6 +17,10 @@
 /* RSA */
 #include "./RSA/rsa.h"
 
+/* Blockchain */
+#include "./Blockchain/block.h"
+#include "./Blockchain/blockchain.h"
+
 int main() {
   Blockchain blockchain;
   blockchain.createGenesisBlock();
