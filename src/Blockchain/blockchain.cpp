@@ -21,7 +21,7 @@ void Blockchain::mineBlock(const char *minerAddress) {
   std::string startStr = "";
 
   Block block(this->getLatestBlock());
-  block.minerAddress = minerAddress;
+  block.setMinerAddress(minerAddress);
 
   long latestAddedBlock = 0;
 

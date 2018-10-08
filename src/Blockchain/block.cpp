@@ -10,6 +10,9 @@ void Block::setIndex(int index) { this->index = index; }
 void Block::setNonce(int nonce) { this->nonce = nonce; }
 void Block::setDifficulty(int difficulty) { this->difficulty = difficulty; }
 void Block::setTimestamp(long timestamp) { this->timestamp = timestamp; }
+void Block::setMinerAddress(std::string minerAddress) {
+  this->minerAddress = minerAddress;
+}
 void Block::setPreviousHash(std::string previousHash) {
   this->previousHash = previousHash;
 }
