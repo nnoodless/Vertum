@@ -6,6 +6,7 @@
 #include <openssl/sha.h>
 #include <random>
 #include <sstream>
+#include <string>
 #include <vector>
 
 /* Utils */
@@ -17,14 +18,22 @@
 /* RSA */
 #include "./RSA/rsa.h"
 
-/* Blockchain */
+/* Block | Blockchain */
 #include "./Blockchain/block.h"
+#include "./Blockchain/block.cpp"
+
 #include "./Blockchain/blockchain.h"
+#include "./Blockchain/blockchain.cpp"
 
 int main() {
+  long long start = utils::currentMillis();
+
   Blockchain blockchain;
   blockchain.createGenesisBlock();
 
+  blockchain.mineBlock("Noodles");
+
+  std::cout << "took: " << utils::currentMillis() - start << " ms" << std::endl;
   return 0;
 }
 
