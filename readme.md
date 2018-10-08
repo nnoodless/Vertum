@@ -4,4 +4,4 @@ Vertum is a cryptocurrency letting you easily set up your own Node and do whatev
 
 Mining:
  To mine Vertum you will need to download the source code and compile it.
- That will automatically start running Node and a miner.
+ That will automatically start a Miner.
